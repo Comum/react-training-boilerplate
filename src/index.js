@@ -3,17 +3,11 @@ import ReactDOM from 'react-dom';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 
-import reducers from './reducers';
-import ProductsPageContainer from './containers/productsPageContainer';
 
-const store = createStore(
-    combineReducers({
-        ...reducers
-    })
-);
-
+const name = 'This Place';
 ReactDOM.render((
-    <Provider store={store}>
-        <ProductsPageContainer />
-    </Provider>
+    <div>
+        <h1>React training</h1>
+        <p>Hello, {name}</p>
+    </div>
 ), document.getElementById('app'));
